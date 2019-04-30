@@ -1,0 +1,48 @@
+URLS = {
+	"A/B Testing": "",
+	"Add/Remove Elements": "http://the-internet.herokuapp.com/add_remove_elements/",
+	"Basic Auth": "the-internet.herokuapp.com/basic_auth", # (user and pass: admin)
+	"Broken Images": "",
+	"Challenging DOM": "",
+	"Checkboxes": "",
+	"Context Menu": "",
+	"Disappearing Elements": "",
+	"Drag and Drop": "",
+	"Dropdown": "",
+	"Dynamic Content": "",
+	"Dynamic Controls": "",
+	"Dynamic Loading": "",
+	"Entry Ad": "",
+	"Exit Intent": "",
+	"File Download": "",
+	"File Upload": "",
+	"Floating Menu": "",
+	"Forgot Password": "",
+	"Form Authentication": "",
+	"Frames": "",
+	"Geolocation": "",
+	"Horizontal Slider": "",
+	"Hovers": "",
+	"Infinite Scroll": "",
+	"JQuery UI Menus": "",
+	"JavaScript Alerts": "",
+	"JavaScript onload event error": "",
+	"Key Presses": "",
+	"Large & Deep DOM": "",
+	"Multiple Windows": "",
+	"Nested Frames": "",
+	"Notification Messages": "",
+	"Redirect Link": "",
+	"Secure File Download": "",
+	"Shifting Content": "",
+	"Slow Resources": "",
+	"Sortable Data Tables": "",
+	"Status Codes": "",
+	"Typos": "",
+	"WYSIWYG Editor": "",
+}
+
+BUTTON_ADD = "//div[@class='example']/button"
+BUTTON_DELETE = "//div[@id='elements']/button"
+SUCCESS_AUTH_TEXT = "//p[contains(text(),'Congratulations! You must have the proper credentials.')]"
+
