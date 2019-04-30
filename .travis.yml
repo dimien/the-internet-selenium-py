@@ -4,4 +4,4 @@ python:
 install:
   - pip install -r reqs.pip
 script:
- - unittest
+ - python -m unittest discover -p "test*.py"
