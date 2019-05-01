@@ -11,7 +11,7 @@ class BaseClass:
             element = self.driver.find_element_by_xpath(item)
             return element
         except:
-            raise Exception(f'Element \"{item}\" not found.')
+            raise Exception('Element "{}" not found.'.format(item))
             return False       
      
     def click(self, item):
