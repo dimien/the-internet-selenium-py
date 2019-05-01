@@ -10,6 +10,9 @@ class testBasicAuth(unittest.TestCase, TheInternet):
         path_to_chrome = config.path()
         self.driver = webdriver.Chrome(executable_path=path_to_chrome)
 
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('--no-sandbox')
+
     def testBasicAuth(self):
     #Arrange
         user = "admin"
