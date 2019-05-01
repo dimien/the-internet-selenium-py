@@ -3,5 +3,12 @@ python:
   - "3.6"
 install:
   - pip install -r reqs.pip
+before_script: 
+  - wget "https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip"
+  - unzip chromedriver_linux64.zip
+  - sudo mv chromedriver /usr/bin/chromedriver
+  - sudo chown root:root /usr/bin/chromedriver
+  - sudo chmod +x /usr/bin/chromedriver
+  - PATH=/usr/bin/chromedriver:$PATH
 script:
  - python -m unittest discover -p "test*.py"
