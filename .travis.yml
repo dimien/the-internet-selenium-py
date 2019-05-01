@@ -9,6 +9,6 @@ before_script:
   - sudo mv chromedriver /usr/bin/chromedriver
   - sudo chown root:root /usr/bin/chromedriver
   - sudo chmod +x /usr/bin/chromedriver
-  - PATH=/usr/bin/chromedriver:$PATH
+  - export PATH=$PATH:/usr/bin/chromedriver
 script:
  - python -m unittest discover -p "test*.py"

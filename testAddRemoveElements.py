@@ -1,13 +1,14 @@
 import unittest
 from selenium import webdriver
 from WebDriverTheInternet import PageElements as p
-from WebDriverTheInternet import config as c
+from WebDriverTheInternet import config
 from WebDriverTheInternet.WebDriverTheInternet_functions import TheInternet
 
-class testAddRemoveElements(unittest.TestCase , TheInternet):
+class testAddRemoveElements(unittest.TestCase, TheInternet):
 
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path=c.CHROMEDRIVER)
+        path_to_chrome = config.path()
+        self.driver = webdriver.Chrome(executable_path=path_to_chrome)
 
     def testAddRemoveElements(self):
     #Arrange
