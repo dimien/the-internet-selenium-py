@@ -13,6 +13,6 @@ class TheInternet(BaseClass):
     def BasicAuth(self, user, password, link):
         self.user = user
         self.password = password
-        url = f"https://{user}:{password}@{link}"
+        url = "https://{}:{}@{}".format(user, password, link)
 
         self.open_url(url)
