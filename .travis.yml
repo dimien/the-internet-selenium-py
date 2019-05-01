@@ -6,12 +6,9 @@ system_site_packages: true
 install:
   - pip install -r reqs.pip
 before_script: 
-  - wget "https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip"
-  - unzip chromedriver_linux64.zip
-  - sudo mv chromedriver /usr/bin/chromedriver
-  - sudo chown root:root /usr/bin/chromedriver
-  - sudo chmod +x /usr/bin/chromedriver
-  - export PATH=/usr/bin/chromedriver:$PATH
-  - sudo apt-get -y install google-chrome-stable
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz -O /tmp/geckodriver.tar.gz
+  - tar -C /opt -xzf /tmp/geckodriver.tar.gz
+  - chmod 755 /opt/geckodriver
+  - ln -fs /opt/geckodriver /usr/local/bin/geckodriver
 script:
- - python -m unittest discover -p "test*.py"
+  - python -m unittest discover -p "test*.py"

@@ -7,11 +7,7 @@ from WebDriverTheInternet.WebDriverTheInternet_functions import TheInternet
 class testBasicAuth(unittest.TestCase, TheInternet):
 
     def setUp(self):
-        path_to_chrome = config.path()
-        self.driver = webdriver.Chrome(executable_path=path_to_chrome)
-
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_argument('--no-sandbox')
+        self.driver = webdriver.Firefox()
 
     def testBasicAuth(self):
     #Arrange
