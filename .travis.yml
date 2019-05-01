@@ -12,5 +12,6 @@ before_script:
   - sudo chown root:root /usr/bin/chromedriver
   - sudo chmod +x /usr/bin/chromedriver
   - export PATH=/usr/bin/chromedriver:$PATH
+  - sudo apt-get -y install google-chrome-stable
 script:
  - python -m unittest discover -p "test*.py"
