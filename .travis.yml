@@ -8,8 +8,12 @@ install:
 before_script: 
   - sudo apt-get -y update
   - sudo apt-get -y install firefox
-  - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz -O /tmp/geckodriver.tar.gz
-  - sudo tar -C /usr/local/bin/ -xzf /tmp/geckodriver.tar.gz
-  - sudo chmod 755 /usr/local/bin/geckodriver
+  - firefox -v
+  - cd /tmp
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz -O /tmp
+  - sudo tar -xvzf geckodriver-v0.24.0-linux64.tar.gz
+  - sudo tar -C /usr/local/bin/ -xzf /tmp/geckodriver
+  - sudo chmod +x /usr/local/bin/geckodriver
+  - export PATH=$PATH:/usr/local/bin/geckodriver
 script:
   - python -m unittest discover -p "test*.py"
