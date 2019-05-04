@@ -14,7 +14,6 @@ before_script:
   - sudo tar -xvf geckodriver-v0.24.0-linux64.tar.gz
   - sudo mv geckodriver /usr/local/bin
   - sudo chmod +x /usr/local/bin/geckodriver
-  - sudo chmod +x /usr/local/bin/geckodriver.log
   - export PATH=$PATH:/usr/local/bin/geckodriver
   - cd /home/travis/build/dimien/the-internet-selenium-py
 script:
