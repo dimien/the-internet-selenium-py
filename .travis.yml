@@ -6,7 +6,6 @@ system_site_packages: true
 install:
   - pip install -r reqs.pip
 before_script:
-  - sudo killall firefox
   - sudo apt-get -y update
   - sudo apt-get -y install firefox
   - firefox -v
