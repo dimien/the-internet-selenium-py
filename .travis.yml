@@ -5,7 +5,8 @@ virtualenv:
 system_site_packages: true
 install:
   - pip install -r reqs.pip
-before_script: 
+before_script:
+  - sudo killall firefox
   - sudo apt-get -y update
   - sudo apt-get -y install firefox
   - firefox -v
@@ -14,7 +15,8 @@ before_script:
   - sudo tar -xvf geckodriver-v0.24.0-linux64.tar.gz
   - sudo mv geckodriver /usr/local/bin
   - sudo chmod +x /usr/local/bin/geckodriver
+  - sudo chmod +x /usr/local/bin/geckodriver.log
   - export PATH=$PATH:/usr/local/bin/geckodriver
   - cd /home/travis/build/dimien/the-internet-selenium-py
 script:
-  - python -m unittest discover -p "test*.py"
+  - sudo python -m unittest discover -p "test*.py"
