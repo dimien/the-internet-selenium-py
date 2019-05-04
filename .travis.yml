@@ -9,7 +9,7 @@ before_script:
   - sudo apt-get -y update
   - sudo apt-get -y install firefox
   - firefox -v
-  - pip install -y selenium
+  - pip install selenium
   - cd /tmp
   - wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
   - sudo tar -xvf geckodriver-v0.24.0-linux64.tar.gz
