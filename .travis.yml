@@ -5,7 +5,6 @@ virtualenv:
 system_site_packages: true
 install:
   - sudo apt-get install python-pip
-  - pip install -r reqs.pip
 before_script:
   - sudo apt-get -y update
   - sudo apt-get -y install firefox
