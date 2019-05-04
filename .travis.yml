@@ -6,6 +6,7 @@ system_site_packages: true
 install:
   - pip install -r reqs.pip
 before_script: 
+  - echo $PWD
   - sudo apt-get -y update
   - sudo apt-get -y install firefox
   - firefox -v
