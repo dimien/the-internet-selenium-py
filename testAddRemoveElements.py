@@ -7,7 +7,7 @@ from WebDriverTheInternet.WebDriverTheInternet_functions import TheInternet
 class testAddRemoveElements(unittest.TestCase, TheInternet):
 
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox(executable_path="/usr/local/bin/geckodriver")
 
     def testAddRemoveElements(self):
     #Arrange
